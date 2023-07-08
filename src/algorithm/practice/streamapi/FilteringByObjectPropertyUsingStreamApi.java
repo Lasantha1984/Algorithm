@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package algorithm.practice.lamdaexpressions;
+package algorithm.practice.streamapi;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +15,7 @@ import java.util.stream.Collectors;
  * @author user
  */
 public class FilteringByObjectPropertyUsingStreamApi {
+
     public static void main(String[] args) {
         List<Person> persons = new ArrayList();
         persons.add(new Person(10, "AAA"));
@@ -23,14 +24,15 @@ public class FilteringByObjectPropertyUsingStreamApi {
         persons.add(new Person(22, "AAD"));
         persons.add(new Person(26, "AAE"));
         persons.add(new Person(19, "AAF"));
-        List<Person> over18 = persons.stream().filter(p->p.age>18).collect(Collectors.toList());
+        List<Person> over18 = persons.stream().filter(p -> p.age > 18).collect(Collectors.toList());
         System.out.println(over18);
     }
 }
 
-class Person{
- int age;
- String name;
+class Person {
+
+    int age;
+    String name;
 
     public Person(int age, String name) {
         this.age = age;
@@ -41,7 +43,5 @@ class Person{
     public String toString() {
         return "Person{" + "age=" + age + ", name=" + name + '}';
     }
- 
 
-   
 }

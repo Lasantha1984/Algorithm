@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package algorithm.practice.lamdaexpressions;
+package algorithm.practice.streamapi;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -22,6 +22,7 @@ public class MaximumSumAndMinimumSum {
         arr.add(4);
         arr.add(5);
         arr.stream().filter(x->!Objects.equals(x, arr.stream().min(Integer::compareTo))).collect(Collectors.toList());
+        
         System.out.println(arr);
     }
 }
